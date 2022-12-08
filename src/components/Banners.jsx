@@ -1,4 +1,5 @@
-import React from "react";
+
+import Dlc from '../components/Dlc';
 
 const Banners = () => {
     return (
@@ -15,6 +16,7 @@ const Banners = () => {
                     <button className="btn m-1 btn-dark">Comprar</button>
                 </div>
             </div>
+            <Dlc greeting="Mount and blade : DLC" />
         </div>
     )
 }
