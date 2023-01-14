@@ -19,7 +19,6 @@ const Dlc = ({ greeting }) => {
                         <div className="m-4 text-center shadow p-3 mb-3 bg-body rounded" key={dlc.id}>
                             <p><img src={dlc.img} alt={dlc.alt} width={350} /></p>
                             <p className="fs-4">{dlc.nombre}</p>
-                            <button className="btn m-1 btn-dark">Comprar</button>
                         </div>
                     )
                 }
