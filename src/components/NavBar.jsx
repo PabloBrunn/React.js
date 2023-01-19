@@ -12,7 +12,16 @@ const NavBar = () => {
                             <Link className="nav-link" to={"/juegos"} >JUEGOS</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to={"/Merchandising"} >MERCHANDISING</Link>
+                            <Link className="nav-link" to={"/categoria"} >MERCHANDISING</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to={"/categoria/remera"} >REMERAS</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to={"/categoria/buzo"} >BUZOS</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to={"/categoria/collar"} >COLLARES</Link>
                         </li>
                     </ul>
                 </nav>
