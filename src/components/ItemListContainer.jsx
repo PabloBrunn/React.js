@@ -3,9 +3,11 @@ import { useParams } from "react-router-dom";
 //import arrayProductos from "./json/Productos.json";
 import ItemList from "./ItemList";
 import { addDoc, collection, getDocs, getFirestore, query, where } from "firebase/firestore";
+import Loading from "./Loading";
 
 const ItemListContainer = () => {
     const [items, setItems] = useState([]);
+    const [loading, setLoading] = useState(true);
     const {id} = useParams();
 
     // Cargo los productos a firebase
@@ -26,16 +28,16 @@ const ItemListContainer = () => {
 
 
         getDocs(q).then((snapShot) => {
-                setItems(snapShot.docs.map((doc) => 
-                    ({id:doc.id, ...doc.data()})
+                setItems(snapShot.docs.map((doc) => ({id:doc.id, ...doc.data()})
                 ))
+            setLoading(false);
         });
     }, [id]);
 
     
     return (
         <div className="container">
-            <ItemList items={items} />
+            {loading ? <Loading /> : <ItemList items={items} />}
         </div>
     )
 };
